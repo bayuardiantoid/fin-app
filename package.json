@@ -1,0 +1,48 @@
+{
+  "name": "fin-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "build": "gulp inject",
+    "start": "nodemon ./dist/server/server.js",
+    "exec": "webpack-dev-server --host 0.0.0.0 --hot"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "bower-webpack-plugin": "^0.1.9",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-inject": "^4.2.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.1.2",
+    "gulp-webpack": "^1.5.0",
+    "jshint-loader": "^0.8.4",
+    "node-sass": "^4.5.1",
+    "null-loader": "^0.1.1",
+    "webpack": "^1.15.0",
+    "webpack-dev-server": "^1.16.5"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "favicon": "0.0.2",
+    "http": "0.0.0",
+    "morgan": "^1.8.1",
+    "angular": "^1.5.11",
+    "angular-animate": "^1.5.11",
+    "angular-messages": "^1.5.11",
+    "angular-resource": "^1.5.11",
+    "angular-sanitize": "^1.5.11",
+    "angular-ui-router": "^0.4.2",
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "2.2.4"
+  }
+}

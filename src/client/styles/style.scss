@@ -1,0 +1,15 @@
+@import '_bootstrap-sprockets';
+@import '_bootstrap';
+
+$defaultFontFamily:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$defaultFontSize:'12px';
+
+body {
+    font-family: $defaultFontFamily;
+    font-size: $defaultFontSize;
+}
+
+.btn-asem {
+    @extend .btn-primary;
+    border: 2px dotted orange;
+}
