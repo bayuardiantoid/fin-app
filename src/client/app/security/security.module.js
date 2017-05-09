@@ -1,7 +1,7 @@
 (
 
   () => {
-    module.exports = angular.module('app.core', [
+    module.exports = angular.module('app.security', [
       'ui.router',
       'route.helper'
     ]);

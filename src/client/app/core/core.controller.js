@@ -4,7 +4,7 @@
 			console.log('Core Controller called');
 			this.who = ', World';
 
-			this.halloClicked = function () {
+			this.haloClicked = function () {
 				console.log("clicked hallo");
 			};
 
