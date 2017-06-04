@@ -11,7 +11,8 @@ var knex = require('knex')({
     password: 'root123.',
     database: 'findb',
     charset: 'utf8'
-  }
+  },
+  debug: true
 });
 
 var bookshelf = require('bookshelf')(knex);
@@ -22,13 +23,27 @@ var four0four = require('../utils/404')();
 
 var models = require('../models')(bookshelf);
 
-var auth = require('../api/authentication')(models, jwt);
+var authCtrl = require('../controller/authCtrl')(models, jwt);
 
-router.get('/auth', auth.authenticate);
+var customerCtrl = require('../controller/customerCtrl')(models);
 
+var accountCtrl = require('../controller/accountCtrl')(models);
 
+var messagingCtrl = require('../controller/messagingCtrl')();
+
+router.get('/auth', authCtrl.authenticate);
+
+router.get('/customer/:custId', customerCtrl.getById);
+
+router.get('/customer/:custId/account', customerCtrl.getAllCustomerAccounts);
+
+router.get('/account/:accId', accountCtrl.getById);
+
+router.post('/sendmsg/:tn/:msg', messagingCtrl.sendMessage);
 
 router.get('/*', four0four.notFoundMiddleware);
+
+
 
 module.exports = router;
 

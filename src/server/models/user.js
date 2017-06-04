@@ -1,11 +1,8 @@
 module.exports = function(bookshelf) {
 
-    
-
-    var User = bookshelf.Model.extend({
-        tableName: 'user'
+    var UserModel = bookshelf.model('User', {
+        tableName: 'users'
     });
 
-
-    return User;
+    return UserModel;
 };

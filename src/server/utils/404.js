@@ -16,6 +16,7 @@ module.exports = function () {
       description: description,
       url: req.url
     };
+    console.error('Page requested not found');
     res.status(404)
       .send(data)
       .end();

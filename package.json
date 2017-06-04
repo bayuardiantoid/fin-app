@@ -4,9 +4,9 @@
   "description": "",
   "main": "server/server.js",
   "scripts": {
-    "build": "gulp inject",
+    "build": "gulp build",
     "watch": "gulp watch",
-    "start": "nodemon ./dist/server/server.js",
+    "start": "gulp start",
     "exec": "webpack-dev-server --host 0.0.0.0 --hot"
   },
   "author": "",
@@ -21,8 +21,9 @@
     "gulp-babel": "^6.1.2",
     "gulp-inject": "^4.2.0",
     "gulp-load-plugins": "^1.5.0",
+    "gulp-nodemon": "^2.2.1",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.4.1",
+    "gulp-sourcemaps": "^1.9.2",
     "gulp-uglify": "^2.1.2",
     "gulp-webpack": "^1.5.0",
     "jshint-loader": "^0.8.4",
@@ -34,6 +35,8 @@
   "dependencies": {
     "angular": "^1.5.11",
     "angular-animate": "^1.5.11",
+    "angular-aria": "^1.5.11",
+    "angular-material": "^1.1.4",
     "angular-messages": "^1.5.11",
     "angular-resource": "^1.5.11",
     "angular-sanitize": "^1.5.11",

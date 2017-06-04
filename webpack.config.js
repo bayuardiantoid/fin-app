@@ -7,8 +7,10 @@ module.exports = {
     vendor: [
       'jquery',
       'angular',
+      'angular-aria',
       'angular-resource',
       'angular-sanitize',
+      'angular-material',
       'angular-messages',
       'angular-ui-router',
       'bootstrap'

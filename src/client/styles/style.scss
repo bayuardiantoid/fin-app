@@ -1,15 +1,36 @@
 @import '_bootstrap-sprockets';
 @import '_bootstrap';
+@import 'angular-material';
+
 
 $defaultFontFamily:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $defaultFontSize:'12px';
 
 body {
-    font-family: $defaultFontFamily;
-    font-size: $defaultFontSize;
+  font-family: $defaultFontFamily;
+  font-size: $defaultFontSize;
 }
 
-.btn-asem {
-    @extend .btn-primary;
-    border: 2px dotted orange;
+/*.btn-asem {
+  @extend .btn-primary;
+  border: 2px dotted orange;
+}*/
+
+.aq-sidebar {
+  z-index: 100;
+  top: 80px;
+  position: fixed;
+  width: 200px;
+} 
+
+.aq-toolbar {
+  z-index: 500;
+  position: absolute;
+  height: 80px;
+  background-color: #0080c0;
+} 
+
+.aq-content {
+  padding-left: 220px;
+  padding-top: 100px;
 }

@@ -20,12 +20,12 @@
             name: 'signout',
             config: {
               url: '/signout',
-              templateUrl: 'app/signout/signout.html',
+              templateUrl: 'app/security/signout.html',
               controller: 'SignOutCtrl',
               title: 'Not Found'
             }
           }
-        ], '/404');
+        ]);
         
       }]);
   }

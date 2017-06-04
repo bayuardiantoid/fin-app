@@ -16,7 +16,7 @@ console.log(path.join(__dirname, '../client'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(logger('dev'));
-app.use('/api/*', require('./routes'));
+app.use('/api', require('./routes'));
 app.use(express.static(path.join(__dirname, '../client')));
 app.all('/*', (req, res, next) => {
 	// Just send the index.html for other files to support HTML5Mode

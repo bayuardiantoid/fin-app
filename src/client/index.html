@@ -2,14 +2,13 @@
 <html lang="en" ng-app="app">
     <base href="/">
     <head>
-        <title>
-            Hello
+        <title ng-bind="title">
         </title>
         <!-- inject:css -->
         <!-- endinject -->
     </head>
     <body>
-        <section ui-view="" autoscroll="true"></section>
+        <div ui-view="" autoscroll="true"></div>
         <!-- inject:js -->
         <!-- endinject -->
     </body>
