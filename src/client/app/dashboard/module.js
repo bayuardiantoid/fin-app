@@ -1,7 +1,7 @@
 (
-
   function() {
-    module.exports = angular.module('app.workspace', [
+    'use strict';
+    module.exports = angular.module('app.dashboard', [
       'ui.router',
       'route.helper'
     ]);

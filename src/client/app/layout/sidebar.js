@@ -1,18 +1,18 @@
 (function() {
   'use strict';
 
-  angular.module('app.layout')
-    .component('faSidebar', {
-      templateUrl: 'app/layout/sidebar.html',
-      controller: FaSidebarCtrl,
+  module.exports = angular.module('app.layout')
+    .component('aqSidebar', {
+      templateUrl: 'app/layout/sidebar-comp.html',
+      controller: AqSidebarCtrl,
       controllerAs: '$ctrl',
       bindings: {
         items: '=',
       },
     });
 
-  FaSidebarCtrl.$inject = ['$scope'];
-  function FaSidebarCtrl($scope) {
+  AqSidebarCtrl.$inject = ['$scope'];
+  function AqSidebarCtrl($scope) {
     var $ctrl = this;
     
 

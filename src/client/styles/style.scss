@@ -9,6 +9,7 @@ $defaultFontSize:'12px';
 body {
   font-family: $defaultFontFamily;
   font-size: $defaultFontSize;
+  bottom:0px;
 }
 
 /*.btn-asem {
@@ -20,7 +21,8 @@ body {
   z-index: 100;
   top: 80px;
   position: fixed;
-  width: 200px;
+  width: 320px;
+  bottom:0px;
 } 
 
 .aq-toolbar {
@@ -31,6 +33,9 @@ body {
 } 
 
 .aq-content {
-  padding-left: 220px;
-  padding-top: 100px;
+  padding-left: 330px;
+}
+
+.aq-dashboard {
+  background-color: #acfdd5;
 }

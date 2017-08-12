@@ -8,16 +8,22 @@
         
         routeHelper.addStates([
           {
-            name: 'ws.dashboard',
+            name: '$.dashboard',
             config: {
-              view: {
-                url: '/dashboard',
-                templateUrl: 'app/dashboard/tpl.html',
-                title: 'dashboard'
+              url: 'dashboard',
+              views: {
+                'app@$': {
+                  templateUrl: 'app/dashboard/tpl.html',
+                  controller: 'DashboardCtrl as vm'
+                }
+              },
+              title: 'Dashboard',
+              settings: {
+                template: '<strong>Dashboard</strong>'
               }
             }
           }
-        ], '/404');
+        ]);
         
       }]);
   }

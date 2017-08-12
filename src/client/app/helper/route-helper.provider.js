@@ -30,7 +30,6 @@
                       '$locationChangeStart',
                       function (event, a, b) {
                         console.log('$locationChangeStart. a,b : \n', a, b);
-                        $rootScope.title = a.title;
                     });
 
                   scope.$on(
@@ -53,6 +52,8 @@
                       function (event, toState, toParams, fromState, fromParams) {
                         console.log('$stateChangeSuccess to '+ toState.name+ '. toState,toParams : \n',
                           toState,toParams);
+                        console.log("title:" + toState.title);
+                        $rootScope.title = toState.title;
                     })
 
 

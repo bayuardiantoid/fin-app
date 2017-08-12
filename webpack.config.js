@@ -13,7 +13,9 @@ module.exports = {
       'angular-material',
       'angular-messages',
       'angular-ui-router',
-      'bootstrap'
+      'bootstrap',
+      //'angularLoadingBar'
+      'angular-loading-bar'
     ]
   },
   watch: false,
@@ -40,7 +42,8 @@ module.exports = {
   resolve: {
     modulesDirectories: ["bower_components", "node_modules"],
     alias: {
-      jquery: "jquery/dist/jquery"
+      jquery: "jquery/dist/jquery",
+      'angular-loading-bar': "angular-loading-bar/build/loading-bar"
     }
   },
 

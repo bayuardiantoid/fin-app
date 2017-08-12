@@ -33,6 +33,8 @@ var messagingCtrl = require('../controller/messagingCtrl')();
 
 router.get('/auth', authCtrl.authenticate);
 
+router.get('/customer/', customerCtrl.getAll);
+
 router.get('/customer/:custId', customerCtrl.getById);
 
 router.get('/customer/:custId/account', customerCtrl.getAllCustomerAccounts);

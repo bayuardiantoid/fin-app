@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  angular.module('app.layout')
+  module.exports = angular.module('app.layout')
     .run(['routeHelper', '$rootScope', '$urlRouter',
       function (routeHelper, $rootScope, $urlRouter) {
 
@@ -12,25 +12,12 @@
               abstract: true,
               views: {
                 '@': {
-                  template: '<div ui-view="ws"></div>',
+                  templateUrl: 'app/layout/main.html'
                 }
               }
             }
-          },
-          {
-            name: '$.main',
-            config: {
-              url: 'main',
-              views: {
-                'ws@$': {
-                  templateUrl: 'app/layout/main.html',
-                  controller: 'LayoutCtrl as vm',
-                  title: 'core'
-                }
-              }
-            }
-          }
-        ], '/main');
+          } 
+        ], '/dashboard');
 
       }]);
 }

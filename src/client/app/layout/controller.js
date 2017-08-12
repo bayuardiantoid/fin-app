@@ -1,8 +1,7 @@
 (function() {
   'use strict';
 
-  angular
-    .module('app.layout')
+  module.exports = angular.module('app.layout')
     .controller('LayoutCtrl', LayoutCtrl);
 
   LayoutCtrl.$inject = [];

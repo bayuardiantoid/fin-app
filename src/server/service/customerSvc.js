@@ -3,11 +3,22 @@ module.exports = function(CustomerModel) {
   var Customer = CustomerModel;
 
   var CustomerSvc = {
+    findAll : findAll,
     findById : findById,
     getAllAccounts : getAllAccounts
   }
   
   return CustomerSvc;
+
+  function findAll(page, pageSize) {
+
+    console.log('Customer findAll called with param: ', arguments);
+
+    return Customer
+      .fetchAll();
+      //.fetchPage({page: page, pageSize: pageSize});
+  }
+
 
   function findById(id) {
 

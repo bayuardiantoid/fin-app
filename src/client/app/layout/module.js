@@ -4,7 +4,8 @@
       'ui.router',
       'route.helper',
       'ngMaterial',
-      'ngAria'
+      'ngAria',
+      'angular-loading-bar'
     ]).config(function($mdThemingProvider) {
       $mdThemingProvider.theme('default')
       .primaryPalette('light-green')

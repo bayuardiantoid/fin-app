@@ -1,18 +1,18 @@
 <md-sidenav
         class="md-sidenav-left"
         md-component-id="left"
-        md-is-locked-open="$mdMedia('gt-md')"
-        md-whiteframe="4">
+        md-is-locked-open="$mdMedia('gt-sm')"
+        md-whiteframe="2">
 
       <md-toolbar class="md-primary md-hue-3">
-        <h1 class="md-toolbar-tools">Sidenav Left</h1>
+        <h1 class="md-toolbar-tools">Aqadia</h1>
+        <img src=""></img>
       </md-toolbar>
-      <md-content layout-padding>
+      <md-content layout-padding  ng-controller="SidebarCtrl as sb">
         <md-menu-content>
-          <md-menu-item ng-repeat="item in [1, 2, 3]">
-            <md-button ng-href="/401">
-              <md-icon md-menu-align-target></md-icon>
-              Option {{item}}
+          <md-menu-item ng-repeat="r in sb.getRoutes()">
+            <md-button ui-sref="{{r.name}}">
+              <div ng-bind-html="sb.getTrustedHtml(r.settings.template)"></div>
             </md-button>
           </md-menu-item>
         </md-menu-content>

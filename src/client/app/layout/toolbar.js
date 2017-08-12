@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('app.layout')
+  module.exports = angular.module('app.layout')
     .component('faToolbar', {
       templateUrl: 'app/layout/toolbar.html',
       controller: FaToolbarCtrl,

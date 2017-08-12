@@ -14,9 +14,19 @@ require('./security/security.controller');
 
 require('./layout/module');
 require('./layout/route');
-require('./layout/sidebar');
+//require('./layout/sidebar');
+require('./layout/sidebar-controller');
 require('./layout/toolbar');
 require('./layout/controller');
+
+require('./dashboard/module');
+require('./dashboard/route');
+require('./dashboard/controller');
+
+require('./customer/module');
+require('./customer/route');
+require('./customer/service');
+require('./customer/view.ctrl');
 
 
 (function () {
@@ -24,7 +34,9 @@ require('./layout/controller');
     module.exports = angular.module('app', [
         'app.core',
         'app.security',
-        'app.layout'
+        'app.layout',
+        'app.dashboard',
+        'app.customer',
     ]);
 
 })();
